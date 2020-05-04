@@ -1,6 +1,6 @@
 {
   "name": "react-native-revolver-view",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "A view with a rotating component and revolving text.",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
@@ -57,7 +57,11 @@
     "react": "~16.9.0",
     "react-native": "~0.61.5",
     "release-it": "^12.6.3",
-    "typescript": "^3.7.5"
+    "typescript": "^3.7.5",
+    "react-native-reanimated": "^1.8.0",
+    "react-native-gesture-handler": "^1.6.0",
+    "react-native-svg": "^12.0.3",
+    "@react-native-community/masked-view": "^0.1.10"
   },
   "peerDependencies": {
     "react": "*",
