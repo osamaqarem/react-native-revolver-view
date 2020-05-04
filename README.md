@@ -34,8 +34,6 @@ Finalize the installation `react-native-gesture-handler` by adding the following
 
 ## Usage
 
-Simple:
-
 ```jsx
 import RevolverView from "./RevolverView"
 
