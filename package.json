@@ -1,6 +1,6 @@
 {
   "name": "react-native-revolver-view",
-  "version": "0.1.2",
+  "version": "1.0.0",
   "description": "A view with a rotating component and revolving text.",
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
