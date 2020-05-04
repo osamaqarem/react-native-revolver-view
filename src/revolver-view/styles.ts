@@ -3,13 +3,13 @@ import { ICON_SIZE } from "./components/SearchIcon";
 
 export const styles = StyleSheet.create({
     container: {
-        width: '100%',
+        width: "100%",
         height: 40,
         borderRadius: 8,
         backgroundColor: "white",
-        flexDirection: 'row',
+        flexDirection: "row",
         alignItems: "center",
-        justifyContent: "center",
+        justifyContent: "center"
     },
     iconContainer: {
         position: "absolute",
@@ -23,18 +23,18 @@ export const styles = StyleSheet.create({
         left: 8,
         width: ICON_SIZE * 1.1,
         height: ICON_SIZE * 1.1,
-        borderRadius: ICON_SIZE / 2,
+        borderRadius: ICON_SIZE / 2
     },
     mask: {
-        flex: 1,
+        flex: 1
     },
     maskedView: {
         flex: 1,
         backgroundColor: "transparent",
-        justifyContent: "center",
+        justifyContent: "center"
     },
     maskedViewContainer: {
         ...StyleSheet.absoluteFillObject,
-        left: -ICON_SIZE,
-    },
-})
+        left: -ICON_SIZE
+    }
+});

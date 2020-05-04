@@ -5,13 +5,10 @@
   "main": "lib/commonjs/index.js",
   "module": "lib/module/index.js",
   "types": "lib/typescript/src/index.d.ts",
-  "react-native": "src/index.tsx",
+  "react-native": "src/index.ts",
   "files": [
     "src",
-    "lib",
-    "android",
-    "ios",
-    "react-native-revolver-view.podspec"
+    "lib"
   ],
   "scripts": {
     "test": "jest",
@@ -29,12 +26,15 @@
     "android"
   ],
   "repository": "https://github.com/osamaq/react-native-revolver-view",
-  "author": "Osama <osamaqarem@gmail.com> (https://github.com/osamaq)",
+  "author": "Osama (https://osamaq.com)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/osamaq/react-native-revolver-view/issues"
   },
   "homepage": "https://github.com/osamaq/react-native-revolver-view#readme",
+  "dependencies": {
+    "react-native-redash": "^13.3.0"
+  },
   "devDependencies": {
     "@commitlint/config-conventional": "^8.3.4",
     "@react-native-community/bob": "^0.10.1",
@@ -43,10 +43,14 @@
     "@types/jest": "^25.1.2",
     "@types/react": "^16.9.19",
     "@types/react-native": "0.61.10",
+    "@typescript-eslint/eslint-plugin": "^2.12.0",
+    "@typescript-eslint/parser": "^2.12.0",
     "commitlint": "^8.3.4",
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
-    "eslint-plugin-prettier": "^3.1.2",
+    "eslint-plugin-react": "^7.14.3",
+    "eslint-plugin-react-hooks": "^2.0.1",
+    "eslint-plugin-react-native": "^3.8.1",
     "husky": "^4.0.1",
     "jest": "^25.1.0",
     "prettier": "^1.19.1",
@@ -66,36 +70,10 @@
       "<rootDir>/lib/"
     ]
   },
-  "husky": {
-    "hooks": {
-      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS",
-      "pre-commit": "yarn lint && yarn typescript"
-    }
-  },
-  "eslintConfig": {
-    "extends": [
-      "@react-native-community",
-      "prettier"
-    ],
-    "rules": {
-      "prettier/prettier": [
-        "error",
-        {
-          "singleQuote": true,
-          "tabWidth": 2,
-          "trailingComma": "es5",
-          "useTabs": false
-        }
-      ]
-    }
-  },
-  "eslintIgnore": ["node_modules/", "lib/"],
-  "prettier": {
-    "singleQuote": true,
-    "tabWidth": 2,
-    "trailingComma": "es5",
-    "useTabs": false
-  },
+  "eslintIgnore": [
+    "node_modules/",
+    "lib/"
+  ],
   "release-it": {
     "git": {
       "commitMessage": "chore: release %s",
@@ -116,6 +94,10 @@
   "@react-native-community/bob": {
     "source": "src",
     "output": "lib",
-    "targets": ["commonjs", "module", "typescript"]
+    "targets": [
+      "commonjs",
+      "module",
+      "typescript"
+    ]
   }
 }

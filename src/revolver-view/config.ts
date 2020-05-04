@@ -1,5 +1,5 @@
-import { Value } from "react-native-reanimated"
-import { SpringConfig } from "./types"
+import { Value } from 'react-native-reanimated';
+import { SpringConfig } from './types';
 
 /**
  * Default parameters for ripple scale and duration.
@@ -9,7 +9,7 @@ export const rippleAnimeParams = {
     medium: 1.5,
     large: 2.5,
     duration: 150,
-}
+};
 
 /**
  * Rotation spring parameters.
@@ -21,4 +21,4 @@ export const defaultSpringConfig: SpringConfig = {
         stiffness: new Value(80),
         damping: new Value(12),
     },
-}
+};
