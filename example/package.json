@@ -15,7 +15,7 @@
     "react-native": "0.62.2",
     "react-native-gesture-handler": "^1.6.1",
     "react-native-reanimated": "^1.8.0",
-    "react-native-revolver-view": "^0.1.1",
+    "react-native-revolver-view": "^0.1.2",
     "react-native-svg": "^12.1.0"
   },
   "devDependencies": {

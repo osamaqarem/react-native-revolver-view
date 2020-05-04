@@ -14,18 +14,62 @@ $ npm install react-native-revolver-view
 $ yarn add react-native-revolver-view
 ```
 
-Follow the installation instructions for each of the following libraries:
+Additional dependencies:
 
 <!-- - [react-native-reanimated](https://github.com/software-mansion/react-native-reanimated)
 - [react-native-gesture-handler](https://github.com/software-mansion/react-native-gesture-handler)
 - [react-native-svg](https://github.com/react-native-community/react-native-svg)
-- [react-native-masked-view](https://github.com/react-native-community/react-native-masked-view) -->
+- [react-native-masked-view](https://github.com/react-native-community/react-native-masked-view)
+- [react-native-redash]() -->
 
 `yarn add react-native-reanimated react-native-gesture-handler @react-native-community/masked-view react-native-svg`
 
+iOS step only:
+
 `npx pod-install ios`
 
+Finalize the installation `react-native-gesture-handler` by adding the following to the top of index.js (must be at the top):
+
+`import 'react-native-gesture-handler'`
+
 ## Usage
+
+Simple:
+
+```jsx
+import RevolverView from "./RevolverView"
+
+const items = ["All", "Videos", "Images", "News"]
+
+const App = () => {
+  const [activeIndex, setActiveIndex] = useState(0)
+
+  const handleNewIndex = newIndex => setActiveIndex(newIndex)
+
+  return (
+    <View
+      style={{
+        flex: 1,
+        justifyContent: "center",
+        alignItems: "center",
+        backgroundColor: "#FFCA27",
+      }}>
+      <RevolverView
+        items={items}
+        activeIndex={activeIndex}
+        onChangeIndex={handleNewIndex}
+        containerStyle={{
+          width: "50%",
+        }}
+      />
+      <View style={{ marginTop: 50 }} />
+      <Button title="Set to index 2" onPress={() => handleNewIndex(2)} />
+    </View>
+  )
+}
+```
+
+For more advanced usage, check out this [example](https://github.com/osamaq/react-native-revolver-view/blob/master/example/App.tsx).
 
 ## Props
 

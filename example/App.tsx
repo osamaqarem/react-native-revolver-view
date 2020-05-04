@@ -41,7 +41,7 @@ const App = () => {
         onChangeIndex={setActiveIndex}
         rippleColor={rippleConfig.rippleColor}
         itemColor={rippleConfig.itemColor}
-        rotatingComponent={<SearchIcon iconColor={rippleConfig.iconColor} />}
+        rotatingComponent={<SemiCircle color={rippleConfig.iconColor} />}
         containerStyle={{
           width: "50%",
         }}
@@ -56,7 +56,7 @@ const App = () => {
           }}
         />
       </RevolverView>
-      <View style={{ marginTop: 100 }} />
+      <View style={{ marginTop: 50 }} />
       <Button title="Index 0" onPress={() => setActiveIndex(0)} />
       <View style={{ marginTop: 10 }} />
       <Button title="Index 1" onPress={() => setActiveIndex(1)} />
@@ -67,5 +67,35 @@ const App = () => {
     </View>
   )
 }
+
+const SemiCircle = ({ color }: { color: string }) => (
+  <View
+    style={{
+      padding: 10,
+    }}>
+    <View
+      style={{
+        top: 0,
+        left: 0,
+        position: "absolute",
+        width: 10,
+        height: 10,
+        overflow: "hidden",
+        bottom: 5,
+      }}>
+      <View
+        style={{
+          top: 0,
+          left: 0,
+          position: "absolute",
+          width: 20,
+          height: 20,
+          borderRadius: 10,
+          backgroundColor: color,
+        }}
+      />
+    </View>
+  </View>
+)
 
 export default App
