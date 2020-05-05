@@ -58,7 +58,7 @@ const App = () => {
         items={items}
         activeIndex={activeIndex}
         onChangeIndex={handleNewIndex}
-        rotatingComponent={<SearchIcon iconColor={rippleConfig.iconColor} />}
+        rotatingComponent={<SearchIcon iconColor="#DDD9CB" />}
         containerStyle={{
           width: "50%",
         }}
@@ -140,7 +140,9 @@ interface RevolverViewProps {
    */
   children?: ReactChild
 }
+```
 
+```ts
 interface SearchIconProps {
   /**
    * Icon color.
