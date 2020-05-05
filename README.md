@@ -10,19 +10,27 @@ A revolving picker view.
 
 ```
 $ npm install react-native-revolver-view
-# or
+```
+
+```
 $ yarn add react-native-revolver-view
 ```
 
 Additional dependencies:
 
-`yarn add react-native-reanimated react-native-gesture-handler @react-native-community/masked-view react-native-svg`
+```
+$ npm install react-native-reanimated react-native-gesture-handler @react-native-community/masked-view react-native-svg
+```
+
+```
+$ yarn add react-native-reanimated react-native-gesture-handler @react-native-community/masked-view react-native-svg
+```
 
 iOS step only:
 
 `npx pod-install ios`
 
-Finalize the installation of `react-native-gesture-handler` by adding the following to the top of index.js (must be at the **top**):
+Finalize the installation of `react-native-gesture-handler` by adding the following to the top of `index.js` (must be at the **top**):
 
 `import 'react-native-gesture-handler'`
 

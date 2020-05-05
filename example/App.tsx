@@ -1,7 +1,7 @@
 import React, { useState } from "react"
-import { Button, View, TextInput, Text } from "react-native"
-import RevolverView from "react-native-revolver-view"
+import { Button, Text, View } from "react-native"
 import { TouchableOpacity } from "react-native-gesture-handler"
+import RevolverView from "react-native-revolver-view"
 
 const items = ["what", "is", "going", "on 🔥"]
 const colors = [

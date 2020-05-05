@@ -23,7 +23,8 @@
   "keywords": [
     "react-native",
     "ios",
-    "android"
+    "android",
+    "picker"
   ],
   "repository": "https://github.com/osamaq/react-native-revolver-view",
   "author": "Osama (https://osamaq.com)",
