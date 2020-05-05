@@ -2,6 +2,22 @@
 
 [![NPM Badge](https://img.shields.io/npm/v/react-native-revolver-view)](https://www.npmjs.com/package/react-native-revolver-view)
 
+<p align="center" >
+  <img
+    width="400px"
+    height="400px"
+    src="https://github.com/osamaq/react-native-revolver-view/raw/master/docs/assets/semicircle.gif"
+    alt="Demo 1"
+  />
+  <img
+    width="400px"
+    height="400px"
+    src="https://github.com/osamaq/react-native-revolver-view/raw/master/docs/assets/input.gif"
+    alt="Demo 2"
+  />
+</p>
+
+
 A revolving picker view.
 
 > Inspired by the work of [Oleg Frolov](https://dribbble.com/Volorf) — [Search icon interaction II](https://dribbble.com/shots/4638987-Search-icon-interaction-II).
@@ -77,6 +93,33 @@ const App = () => {
 For more advanced usage, check out this [example](https://github.com/osamaq/react-native-revolver-view/blob/master/example/App.tsx).
 
 ## Props
+
+<table>
+  <tr>
+    <th>Item in Gif</th>
+    <th>Prop</th>
+    <th>Gif</th>
+  </tr>
+  <tr>
+    <td>White container</td>
+    <td>containerStyle</td>
+        <td
+  rowspan="4"
+  ><img src="https://github.com/osamaq/react-native-revolver-view/raw/master/docs/assets/wow.gif" title="Demo 3"></td>
+  </tr>
+  <tr>
+    <td>wow</td>
+    <td>rotatingComponent</td>
+  </tr>
+  <tr>
+    <td>'what is going on'</td>
+    <td>items</td>
+  </tr>
+  <tr>
+    <td>'Flexible' button</td>
+    <td>children</td>
+  </tr>
+</table>
 
 ```tsx
 interface RevolverViewProps {
