@@ -1,14 +1,13 @@
 import React, { useState } from "react"
-import { Button, Text, View } from "react-native"
-import { TouchableOpacity } from "react-native-gesture-handler"
+import { Button, TextInput, View } from "react-native"
 import RevolverView from "react-native-revolver-view"
 
-const items = ["what", "is", "going", "on 🔥"]
+const items = ["All", "Videos", "Images", "News"]
 const colors = [
   { rippleColor: "#FFCA27", iconColor: "lightblue", itemColor: "lightblue" },
   { rippleColor: "#ff83c6", iconColor: "#9c005e", itemColor: "#9c005e" },
   { rippleColor: "#beb3ff", iconColor: "#5c569f", itemColor: "#5c569f" },
-  { rippleColor: "#ff75a2", iconColor: "#d14274", itemColor: "crimson" },
+  { rippleColor: "#ff75a2", iconColor: "#d14274", itemColor: "#d14274" },
 ]
 const App = () => {
   const [rippleConfig, setRippleConfig] = useState({
@@ -42,33 +41,20 @@ const App = () => {
         onChangeIndex={setActiveIndex}
         rippleColor={rippleConfig.rippleColor}
         itemColor={rippleConfig.itemColor}
-        rotatingComponent={
-          <Text style={{ fontSize: 8, letterSpacing: 0.4, color: "black" }}>
-            WOW
-          </Text>
-        }
+        rotatingComponent={<SemiCircle color={rippleConfig.iconColor} />}
         containerStyle={{
           width: "50%",
-          transform: [{ scale: 1.5 }],
         }}
         itemStyle={{
           letterSpacing: 0.4,
         }}>
-        <TouchableOpacity
+        <TextInput
           style={{
-            width: "50%",
-            height: "70%",
-            borderRadius: 6,
-            marginLeft: 60,
-            marginRight: 20,
-            backgroundColor: "#FFCA27",
-            justifyContent: "center",
-            alignItems: "center",
-          }}>
-          <Text style={{ fontSize: 12, letterSpacing: 0.4, color: "white" }}>
-            Flexible
-          </Text>
-        </TouchableOpacity>
+            flex: 1,
+            marginLeft: 100,
+            marginRight: 10,
+          }}
+        />
       </RevolverView>
       <View style={{ marginTop: 50 }} />
       <Button title="Index 0" onPress={() => setActiveIndex(0)} />

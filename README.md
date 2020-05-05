@@ -26,6 +26,8 @@ $ npm install react-native-reanimated react-native-gesture-handler @react-native
 $ yarn add react-native-reanimated react-native-gesture-handler @react-native-community/masked-view react-native-svg
 ```
 
+> RN < 0.60 users need to perform linking.
+
 iOS step only:
 
 ```
