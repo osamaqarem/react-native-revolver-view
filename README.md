@@ -28,9 +28,11 @@ $ yarn add react-native-reanimated react-native-gesture-handler @react-native-co
 
 iOS step only:
 
-`npx pod-install ios`
+```
+$ npx pod-install ios
+```
 
-Finalize the installation of `react-native-gesture-handler` by adding the following to the top of `index.js` (must be at the **top**):
+Finalize the installation of `react-native-gesture-handler` by adding the following to the top of [`index.js`](https://github.com/osamaq/react-native-revolver-view/blob/d036cef09770245633596301394b2b10a2500fb6/example/index.js#L1) (must be at the **top**):
 
 `import 'react-native-gesture-handler'`
 
