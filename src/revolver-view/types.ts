@@ -18,8 +18,7 @@ export interface RevolverViewProps {
     activeIndex: number
     /**
      * Called as a result of the tap gesture on the icon.
-     * Similarly to a TextInput's onChangeText,
-     * onChangeIndex's handler should update the current active index state to @param newIndex.
+     * Changed index is passed as an argument to the callback handler.
      */
     onChangeIndex: (newIndex: number) => void
     /**
@@ -71,4 +70,17 @@ export interface RevolverViewProps {
      * Positioned to the right of the revolving text.
      */
     children?: ReactChild
+}
+
+export interface SearchIconProps {
+    /**
+     * Icon color.
+     */
+    iconColor: string
+    /**
+     * Icon width and height.
+     * @default
+     * 20
+     */
+    iconSize?: number
 }

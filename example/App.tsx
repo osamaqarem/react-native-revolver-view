@@ -1,13 +1,14 @@
 import React, { useState } from "react"
-import { Button, View, TextInput } from "react-native"
+import { Button, View, TextInput, Text } from "react-native"
 import RevolverView from "react-native-revolver-view"
+import { TouchableOpacity } from "react-native-gesture-handler"
 
-const items = ["All", "Videos", "Images", "News"]
+const items = ["what", "is", "going", "on 🔥"]
 const colors = [
   { rippleColor: "#FFCA27", iconColor: "lightblue", itemColor: "lightblue" },
   { rippleColor: "#ff83c6", iconColor: "#9c005e", itemColor: "#9c005e" },
   { rippleColor: "#beb3ff", iconColor: "#5c569f", itemColor: "#5c569f" },
-  { rippleColor: "#ff75a2", iconColor: "#d14274", itemColor: "#d14274" },
+  { rippleColor: "#ff75a2", iconColor: "#d14274", itemColor: "crimson" },
 ]
 const App = () => {
   const [rippleConfig, setRippleConfig] = useState({
@@ -41,20 +42,33 @@ const App = () => {
         onChangeIndex={setActiveIndex}
         rippleColor={rippleConfig.rippleColor}
         itemColor={rippleConfig.itemColor}
-        rotatingComponent={<SemiCircle color={rippleConfig.iconColor} />}
+        rotatingComponent={
+          <Text style={{ fontSize: 8, letterSpacing: 0.4, color: "black" }}>
+            WOW
+          </Text>
+        }
         containerStyle={{
           width: "50%",
+          transform: [{ scale: 1.5 }],
         }}
         itemStyle={{
           letterSpacing: 0.4,
         }}>
-        <TextInput
+        <TouchableOpacity
           style={{
-            flex: 1,
-            marginLeft: 100,
-            marginRight: 10,
-          }}
-        />
+            width: "50%",
+            height: "70%",
+            borderRadius: 6,
+            marginLeft: 60,
+            marginRight: 20,
+            backgroundColor: "#FFCA27",
+            justifyContent: "center",
+            alignItems: "center",
+          }}>
+          <Text style={{ fontSize: 12, letterSpacing: 0.4, color: "white" }}>
+            Flexible
+          </Text>
+        </TouchableOpacity>
       </RevolverView>
       <View style={{ marginTop: 50 }} />
       <Button title="Index 0" onPress={() => setActiveIndex(0)} />

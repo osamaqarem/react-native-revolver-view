@@ -16,26 +16,20 @@ $ yarn add react-native-revolver-view
 
 Additional dependencies:
 
-<!-- - [react-native-reanimated](https://github.com/software-mansion/react-native-reanimated)
-- [react-native-gesture-handler](https://github.com/software-mansion/react-native-gesture-handler)
-- [react-native-svg](https://github.com/react-native-community/react-native-svg)
-- [react-native-masked-view](https://github.com/react-native-community/react-native-masked-view)
-- [react-native-redash]() -->
-
 `yarn add react-native-reanimated react-native-gesture-handler @react-native-community/masked-view react-native-svg`
 
 iOS step only:
 
 `npx pod-install ios`
 
-Finalize the installation `react-native-gesture-handler` by adding the following to the top of index.js (must be at the top):
+Finalize the installation of `react-native-gesture-handler` by adding the following to the top of index.js (must be at the **top**):
 
 `import 'react-native-gesture-handler'`
 
 ## Usage
 
 ```jsx
-import RevolverView from "./RevolverView"
+import RevolverView, { SearchIcon } from "react-native-revolver-view"
 
 const items = ["All", "Videos", "Images", "News"]
 
@@ -56,6 +50,7 @@ const App = () => {
         items={items}
         activeIndex={activeIndex}
         onChangeIndex={handleNewIndex}
+        rotatingComponent={<SearchIcon iconColor={rippleConfig.iconColor} />}
         containerStyle={{
           width: "50%",
         }}
@@ -136,6 +131,19 @@ interface RevolverViewProps {
    * Positioned to the right of the revolving text.
    */
   children?: ReactChild
+}
+
+interface SearchIconProps {
+  /**
+   * Icon color.
+   */
+  iconColor: string
+  /**
+   * Icon width and height.
+   * @default
+   * 20
+   */
+  iconSize?: number
 }
 ```
 

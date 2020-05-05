@@ -1,5 +1,6 @@
 import React from "react"
 import Svg, { Circle, Rect } from "react-native-svg"
+import { SearchIconProps } from "../types"
 
 /**
  * Width and height of the icon.
@@ -7,12 +8,12 @@ import Svg, { Circle, Rect } from "react-native-svg"
  */
 export const ICON_SIZE = 20
 
-interface Props {
-  iconColor: string
-}
-function SearchIcon({ iconColor }: Props) {
+export function SearchIcon({
+  iconColor,
+  iconSize = ICON_SIZE,
+}: SearchIconProps) {
   return (
-    <Svg width={ICON_SIZE} height={ICON_SIZE} viewBox="0 0 28 28" fill="none">
+    <Svg width={iconSize} height={iconSize} viewBox="0 0 28 28" fill="none">
       <Circle cx={12} cy={12} r={10.5} stroke={iconColor} strokeWidth={3} />
       <Rect
         x={18.065}
