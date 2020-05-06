@@ -17,7 +17,6 @@
   />
 </p>
 
-
 A revolving picker view.
 
 > Inspired by the work of [Oleg Frolov](https://dribbble.com/Volorf) — [Search icon interaction II](https://dribbble.com/shots/4638987-Search-icon-interaction-II).
@@ -50,6 +49,8 @@ iOS step only:
 $ npx pod-install ios
 ```
 
+For `react-native-gesture-handler`, Andorid needs some [additional steps](https://software-mansion.github.io/react-native-gesture-handler/docs/getting-started.html#android).
+
 Finalize the installation of `react-native-gesture-handler` by adding the following to the top of [`index.js`](https://github.com/osamaq/react-native-revolver-view/blob/d036cef09770245633596301394b2b10a2500fb6/example/index.js#L1) (must be at the **top**):
 
 `import 'react-native-gesture-handler'`
@@ -64,7 +65,7 @@ const items = ["All", "Videos", "Images", "News"]
 const App = () => {
   const [activeIndex, setActiveIndex] = useState(0)
 
-  const handleNewIndex = newIndex => setActiveIndex(newIndex)
+  const handleNewIndex = (newIndex) => setActiveIndex(newIndex)
 
   return (
     <View
