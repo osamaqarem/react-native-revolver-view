@@ -10,7 +10,7 @@ const colors = [
   { rippleColor: "#ff75a2", iconColor: "#d14274", itemColor: "#d14274" },
 ]
 const App = () => {
-  const [rippleConfig, setRippleConfig] = useState({
+  const [config, setConfig] = useState({
     rippleColor: colors[0].rippleColor,
     iconColor: colors[0].iconColor,
     itemColor: colors[0].itemColor,
@@ -18,7 +18,7 @@ const App = () => {
   })
 
   const setActiveIndex = (newIndex: number) =>
-    setRippleConfig((state) => ({
+    setConfig((state) => ({
       ...state,
       activeIndex: newIndex,
       rippleColor: colors[newIndex].rippleColor,
@@ -37,11 +37,11 @@ const App = () => {
       <RevolverView
         items={items}
         rippleActiveOpacity={0.5}
-        activeIndex={rippleConfig.activeIndex}
+        activeIndex={config.activeIndex}
         onChangeIndex={setActiveIndex}
-        rippleColor={rippleConfig.rippleColor}
-        itemColor={rippleConfig.itemColor}
-        rotatingComponent={<SemiCircle color={rippleConfig.iconColor} />}
+        rippleColor={config.rippleColor}
+        itemColor={config.itemColor}
+        rotatingComponent={<SemiCircle color={config.iconColor} />}
         containerStyle={{
           width: "50%",
         }}

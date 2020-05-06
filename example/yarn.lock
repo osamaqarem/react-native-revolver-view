@@ -5184,10 +5184,10 @@ react-native-redash@^13.3.0:
     normalize-svg-path "^1.0.1"
     parse-svg-path "^0.1.2"
 
-react-native-revolver-view@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/react-native-revolver-view/-/react-native-revolver-view-1.0.1.tgz#448a73b9a269f84d95419f01edcbd0f821c07a0b"
-  integrity sha512-xxUKgYDsZkgGDXAQc5CddcrN+DgYPf76wIdiXQX+MeYVHq2ayqL20HDxU2YAH9vNZt/NoxjpTh30mM94h5Hphg==
+react-native-revolver-view@^1.0.2:
+  version "1.0.2"
+  resolved "https://registry.yarnpkg.com/react-native-revolver-view/-/react-native-revolver-view-1.0.2.tgz#e4e99bbfa33d847dbe7bef601baf664aa7824148"
+  integrity sha512-uy8npL0zCv7+c33gufIjcdb1oo/g9U5JTv3DDwOxQRaotdYKler72AtITAMtleG3013aJ8eM4tquZimyGRAkBw==
   dependencies:
     react-native-redash "^13.3.0"
 
