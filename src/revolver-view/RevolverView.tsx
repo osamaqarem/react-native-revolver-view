@@ -40,8 +40,9 @@ const RevolverView = ({
   containerStyle,
   itemStyle,
   rotatingComponent = <SearchIcon iconColor="#DDD9CB" />,
+  rotatingComponentStyle,
+  rippleStyle,
   rippleActiveOpacity = 0.05,
-  rippleColor = "#000",
   itemColor = "#DDD9CB",
   children,
 }: RevolverViewProps) => {
@@ -196,7 +197,7 @@ const RevolverView = ({
       <TapGestureHandler {...gestureHandler} maxDurationMs={100000}>
         <Animated.View
           style={[
-            styles.iconContainer,
+            styles.rotatingComponentContainer,
             {
               transform: [
                 {
@@ -204,19 +205,20 @@ const RevolverView = ({
                 },
               ],
             },
+            rotatingComponentStyle,
           ]}>
           {rotatingComponent}
         </Animated.View>
       </TapGestureHandler>
       <RippleView
-        rippleColor={rippleColor}
         opacity={opacityAnim}
         rippleScale={rippleAnim}
+        rippleStyle={rippleStyle}
       />
       <RippleView
-        rippleColor={rippleColor}
         opacity={gestureOpacityAnim}
         rippleScale={gestureRippleAnim}
+        rippleStyle={rippleStyle}
       />
     </View>
   )

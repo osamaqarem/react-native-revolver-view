@@ -11,11 +11,11 @@ export const styles = StyleSheet.create({
         alignItems: "center",
         justifyContent: "center"
     },
-    iconContainer: {
+    rotatingComponentContainer: {
         position: "absolute",
         left: 10,
         justifyContent: "center",
-        zIndex: 100
+        zIndex: 1
     },
     ripple: {
         position: "absolute",
@@ -23,7 +23,8 @@ export const styles = StyleSheet.create({
         left: 8,
         width: ICON_SIZE * 1.1,
         height: ICON_SIZE * 1.1,
-        borderRadius: ICON_SIZE / 2
+        borderRadius: ICON_SIZE / 2,
+        backgroundColor: "#000",
     },
     mask: {
         flex: 1

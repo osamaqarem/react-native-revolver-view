@@ -1,26 +1,27 @@
 import React from "react"
 import Animated from "react-native-reanimated"
 import { styles } from "../styles"
+import { ViewStyle } from "react-native"
 
 interface Props {
-  rippleColor: string
   opacity: Animated.Value<number> | Animated.Node<number>
   rippleScale: Animated.Node<number>
+  rippleStyle?: ViewStyle
 }
 
 const RippleView = ({
-  rippleColor,
   opacity: gestureOpacity,
   rippleScale: gestureRippleAnim,
+  rippleStyle,
 }: Props) => (
   <Animated.View
     style={[
       styles.ripple,
       {
-        backgroundColor: rippleColor,
         opacity: gestureOpacity,
         transform: [{ scale: gestureRippleAnim }],
       },
+      rippleStyle,
     ]}
   />
 )

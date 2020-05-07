@@ -65,7 +65,7 @@ const items = ["All", "Videos", "Images", "News"]
 const App = () => {
   const [activeIndex, setActiveIndex] = useState(0)
 
-  const handleNewIndex = (newIndex) => setActiveIndex(newIndex)
+  const handleNewIndex = newIndex => setActiveIndex(newIndex)
 
   return (
     <View
@@ -134,8 +134,7 @@ interface RevolverViewProps {
   activeIndex: number
   /**
    * Called as a result of the tap gesture on the icon.
-   * Similarly to a TextInput's onChangeText,
-   * onChangeIndex's handler should update the current active index state to @param newIndex.
+   * Changed index is passed as an argument to the callback handler.
    */
   onChangeIndex: (newIndex: number) => void
   /**
@@ -171,17 +170,40 @@ interface RevolverViewProps {
    */
   rotatingComponent?: React.ReactElement<any>
   /**
+   * Rotating component container style.
+   * This is the container that applies the rotation transform.
+   * @default
+   * {
+   *    position: "absolute",
+   *    left: 10,
+   *    justifyContent: "center",
+   *    zIndex: 1
+   *    transform: [{rotate: Animated.Node<number> }]
+   * }
+   */
+  rotatingComponentStyle?: ViewStyle
+  /**
+   * Ripple style.
+   * @default
+   *{
+   *    position: "absolute",
+   *    top: 8,
+   *    left: 8,
+   *    width: 22,
+   *    height: 22,
+   *    borderRadius: 20,
+   *    backgroundColor: "#000",
+   *    opacity: Animated.Node<number>,
+   *    transform: [{ scale: Animated.Node<number> }],
+   * }
+   */
+  rippleStyle?: ViewStyle
+  /**
    * Ripple maximum opacity.
    * @default
    * 0.05
    */
   rippleActiveOpacity?: number
-  /**
-   * Ripple color.
-   * @default
-   * "#000"
-   */
-  rippleColor?: string
   /**
    * React children components.
    * Positioned to the right of the revolving text.
