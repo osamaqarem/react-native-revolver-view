@@ -1,5 +1,7 @@
 # Revolver View
 
+## (Unmaintained - please fork)
+
 [![NPM Badge](https://img.shields.io/npm/v/react-native-revolver-view)](https://www.npmjs.com/package/react-native-revolver-view)
 
 <p align="center" >
